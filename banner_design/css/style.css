@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css?family=Concert+One|Kaushan+Script|Monoton|Roboto&display=swap');
+html{
+	scroll-behavior: smooth;
+}
+
+*{
+	padding:0;
+	margin:0;
+	box-sizing:border-box; 
+}
+header{
+	background-image:linear-gradient(45deg,rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('../images/brick-wall.jpg'); 
+	background-size:cover;
+	background-attachment: fixed;
+	height:93vh;
+}
+p{
+	font-family: 'Roboto', sans-serif;
+	font-size: 17px;
+}
+
+#home h1{
+	font-size:50px;
+	padding-top:60px ;
+	padding-bottom: 20px;
+	/*font-family: 'Luckiest Guy', cursive;*/
+	font-family: 'Kaushan Script', cursive;
+}
+#home h2{
+	font-family: 'Monoton', cursive;
+}
+#home h5{
+	font-family: 'Concert One', cursive;
+	font-size: 25px;
+	padding-bottom: 30px;
+}
+#home .visit-us{
+	background: green;
+	padding:10px 50px;
+	border-radius: 50px;
+	border:3px solid green;
+	font-size:17px;
+	transition: 1s;
+	font-weight: bold;
+	text-transform: uppercase;
+	display: inline-block;
+}
+#home .visit-us:hover{
+	background: none;
+}
+
+/*.navbar*/
+.mynavbar{
+	position:sticky;
+	top:0px;
+	box-shadow: 0 2px 0 ;
+	z-index:1020;
+	background: black;
+	font-family: 'Roboto', sans-serif;
+}
+.mynavbar .container{
+	display: flex;
+	flex-direction: column;
+	justify-content:flex-start;
+	min-height:50px;
+	
+}
+.mynavbar .container>div:first-child{
+	position: relative;
+	display: none;
+	font-size:27px;
+	flex-basis:50px;
+	
+}
+.mynavbar .container>div>#bars{
+	position: absolute;
+	z-index:1051;
+}.mynavbar .container>div>#times{
+	position: absolute;
+	z-index:1050;
+}
+.mynavbar ul{
+	display: flex;
+	padding-top: 10px;
+	justify-content: space-between;
+}
+.mynavbar ul li{
+	flex:1;
+	position:relative;
+	font-size: 20px;
+}
+.mynavbar ul li:after{
+	content: '';
+	width: 0px;
+	height: 3px;
+	position: absolute;
+	left: 0px;
+	background: white;
+	bottom:0;
+	transition: 0.4s;
+}
+.mynavbar ul li:hover:after{
+	width: 100px;
+}
+.mynavbar ul li a{
+	color: white;
+	text-decoration: none;
+	font-size:18px;
+}
+.mynavbar ul li a:hover{
+	color: orange;
+}
+
+h3{
+	position: relative;
+	font-family: 'Roboto', sans-serif;
+}
+h3:before{
+	content:'';
+	position: absolute;
+	background:black;
+	width: 150px;
+	height: 2px;
+	bottom:5px;
+
+}
+#about-us .myborder{
+	border:15px solid green;
+	padding: 0;
+	transition:0.3s;
+}
+#about-us .myborder img{
+	transition:0.3s;
+}
+#about-us .myborder:hover {
+	transform: translate(20px,20px);
+}
+#about-us .myborder:hover img{
+	transform: translate(-30px,-30px );
+
+}
+#about-us .row>div,#projects .row>div,#team .row>div,#contact-us .row>div{
+	margin-bottom: 10px;
+	/*padding-bottom: 20px;*/
+	/*border:1px solid black;*/
+}
+
+#projects .show_this{
+	display: none;
+}
+
+/*team*/
+#team .mycontainer{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+#team .mycontainer .fig_div{
+	flex-basis:250px;
+	transition: 0.5s;
+}
+#team .mycontainer .fig_div:hover{
+	box-shadow: 0 0 3px black;
+}
+#team .mycontainer .fig_div:hover figcaption{
+	background: rgba(0,0,0,0.3);
+}
+#team .mycontainer .fig_div img{
+	width:100%;
+	height: 250px;
+	border-radius: 125px;
+}
+
+/*contact-us*/
+#contact-us form input,#contact-us form textarea{
+	border:1px solid green;
+	width: 100%;
+	padding:5px;
+	margin-bottom:10px ;
+}
+#contact-us form input:hover,#contact-us form textarea:hover{
+	box-shadow: 0 0 4px green;
+}
+#contact-us .icons>div>span:first-child{
+	font-size: 20px;
+	margin-right: 10px;
+	margin-bottom:30px;
+	color:green;
+
+}
+#contact-us .icons>div:last-child span{
+	font-size: 24px ;
+	margin-right: 20px;
+	padding:5px 10px;
+	background: green;
+	color:white;
+	border-radius: 5px;
+}
+
+#contact-us .icons .this{
+	font-size:19px;
+	font-family: 'Roboto', sans-serif;
+}
+#contact-us form div{
+	padding:8px 12px;
+	border:1px solid black;
+	font-size:18px;
+	font-weight: bold;
+	border-radius: 25px;
+	transition: 0.4s;
+	display:inline-block;
+}
+#contact-us form div:hover{
+	color:white;
+	background: black;
+}
+
+
+#scrollUp{
+	position:fixed;
+	bottom: 8px;
+	right: 20px;
+	z-index: 1000;
+	background: black;
+}
+#scrollUp:hover{
+	background:orange;
+}
+
+
+
+@media(max-width: 600px){
+	#home h1{
+	font-size:20px;
+	padding:10px 0px ;
+	/*font-family: 'Luckiest Guy', cursive;*/
+	font-family: 'Kaushan Script', cursive;
+}
+#home h2{
+	font-size: 18px;
+}
+#home h5{
+	font-family: 'Concert One', cursive;
+	font-size: 18px;
+	padding-bottom:20px;
+}
+#home .visit-us{
+	background: green;
+	padding:5px 14px;
+	border-radius: 50px;
+	border:3px solid green;
+	font-size:17px;
+	transition: 1s;
+}
+
+	header{
+	background-image:linear-gradient(45deg,rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url('../images/brick-wall.jpg'); 
+	background-size:100vw 50vh;
+	height: 50vh;
+}
+
+	.mynavbar .container>div:first-child{
+	position: relative;
+	display: block;
+}
+	.mynavbar .mynav{
+		height: 0px;
+		transition:0.5s;
+		overflow-y: hidden;
+
+	}
+	.mynavbar ul{
+	display:block;
+}
+.mynavbar ul li{
+		font-size: 17px;
+}
+	.mynavbar ul li{
+	display:block;
+	padding:5px 0px;
+}
+	.mynavbar ul li:hover{
+		background: black;
+	}
+
+	#team .mycontainer{
+		display: flex;
+		align-items:center;
+		flex-direction:column;
+	}
+	#team .mycontainer .fig_div{
+		width:200px;
+	}
+	#team .mycontainer .fig_div img{
+		height: 200px;
+		width: 100%;
+	}
+
+}
